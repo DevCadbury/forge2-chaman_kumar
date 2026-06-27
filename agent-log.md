@@ -156,6 +156,25 @@ graded sprint loop above.
 
 ---
 
+## Bonus agent -- QA Reviewer (`#qa`)
+
+A third agent (OpenClaw Reviewer, config `agents/openclaw/openclaw-reviewer.json`) ran as a
+code-review / QA gate in `#qa`. Its real activity is in `slack-export/qa/`:
+
+- **Reviewed the `GET /api/health` work** (`routes/api.php`, `tests/Feature/HealthTest.php`) and
+  posted concrete findings: liveness vs readiness not distinguished (the endpoint returns 200
+  even if the DB is down), no DB ping / timestamp / version field, and a thin test (happy-path
+  only, no content-type assertion). It proposed a `/health/deep` readiness endpoint that pings
+  the database and returns 503 when degraded.
+- **Ran a structured project review** across controllers, models/migrations, and tests/routes,
+  fanning the deep-dive into parallel sub-reviews and compiling the findings into one report.
+
+These reviews are part of the error -> review -> fix loop and ran before the human signed off in
+`#human-review`. (The reviewer shares the OpenClaw gateway's Slack identity; its config, role,
+and `#qa` transcript are committed as evidence of genuine participation.)
+
+---
+
 ## How this maps to the rubric
 
 - **Orchestration loop:** human goal (`#sprint-main`) -> Hermes plan + scoped handoff
