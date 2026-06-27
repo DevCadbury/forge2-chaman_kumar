@@ -5,7 +5,7 @@ services:
     rootDir: backend
     dockerfilePath: ./Dockerfile
     plan: free
-    healthCheckPath: /api/me
+    healthCheckPath: /up
     envVars:
       - key: APP_NAME
         value: PulseDesk
