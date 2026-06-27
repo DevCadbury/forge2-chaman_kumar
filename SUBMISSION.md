@@ -6,13 +6,13 @@
 - [x] Multi-tenancy: Org A cannot see Org B data (tenant derived from auth session) — `app/Models/Scopes/OrganizationScope.php`, proven by `backend/tests/Feature/TenantIsolationTest.php`
 - [x] Hermes config committed → `agents/hermes/hermes-config.yaml` (secrets redacted)
 - [x] OpenClaw config committed → `agents/openclaw/openclaw.json` (secrets redacted)
-- [ ] `agent-log.md` shows the real human → Hermes → OpenClaw loop  *(fill from your Slack run)*
+- [x] `agent-log.md` shows the real human → Hermes → OpenClaw loop
 - [x] `sprints/` has ≥ 2 sprint docs
-- [ ] Slack proof in `slack-export/` (export) or `slack-export/screenshots/` (per channel)  *(add after the run)*
+- [x] Slack proof in `slack-export/` (export) or `slack-export/screenshots/` (per channel)
 - [ ] App / agents-running / CI screenshots in `evidence/screenshots/`  *(add after the run)*
 - [x] `.github/workflows/ci.yml` present — install → migrate → test (backend) + build (frontend)
-- [ ] CI green run on the Actions tab  *(appears after first push/PR)*
-- [ ] PRs merged by me (human)  *(do this via the agent loop)*
+- [x] CI green run on the Actions tab
+- [x] PRs merged by me (human)
 - [x] All model calls go through EastRouter (see agent configs)
 
 ## Summary
