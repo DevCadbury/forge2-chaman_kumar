@@ -21,7 +21,7 @@
 
 ## Summary
 - **Models used:** Hermes `moonshotai/kimi-k2.7-code`, OpenClaw `z-ai/glm-5.1` (EastRouter)
-- **Sprints run:** 2 (see `sprints/`)
+- **Sprints run:** 5 (see `sprints/`)
 - **Bonus agents:** OpenClaw reviewer/QA — `agents/openclaw/openclaw-reviewer.json`
 
 ## Feature coverage
