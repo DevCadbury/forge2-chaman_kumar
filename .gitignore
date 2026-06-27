@@ -18,3 +18,8 @@ TOOLS.md
 USER.md
 HEARTBEAT.md
 openclaw-workspace-state.json
+
+# Agent runtime / workspace scratch (never commit)
+.hermes/
+MEMORY.md
+create-pr.ps1

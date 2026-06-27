@@ -16,7 +16,7 @@
 - [x] All model calls go through EastRouter (see agent configs)
 
 ## Summary
-- **Models used:** Hermes `deepseek/deepseek-v4-pro`, OpenClaw `z-ai/glm-5.1` (EastRouter)
+- **Models used:** Hermes `moonshotai/kimi-k2.7-code`, OpenClaw `z-ai/glm-5.1` (EastRouter)
 - **Sprints run:** 2 (see `sprints/`)
 - **Bonus agents:** OpenClaw reviewer/QA — `agents/openclaw/openclaw-reviewer.json`
 

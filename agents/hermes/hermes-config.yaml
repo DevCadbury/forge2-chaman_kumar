@@ -3,7 +3,7 @@
 provider: eastrouter
 base_url: https://api.eastrouter.com/v1
 api_key: ${EASTROUTER_API_KEY}
-model: deepseek/deepseek-v4-pro        # strong reasoning for sprint planning / PO work
+model: moonshotai/kimi-k2.7-code        # strong reasoning for sprint planning / PO work
 
 memory:
   enabled: true                        # keeps sprint backlog + decisions across turns

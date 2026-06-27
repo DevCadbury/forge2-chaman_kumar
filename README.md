@@ -13,7 +13,7 @@ Every push and PR triggers the CI pipeline (`.github/workflows/ci.yml`). Backend
 Laravel 11 · PHP 8.2+ · MySQL 8 · Laravel Sanctum · React 19 · Vite · Tailwind CSS
 
 ## EastRouter models used
-- Hermes (planning / product owner): `deepseek/deepseek-v4-pro`
+- Hermes (planning / product owner): `moonshotai/kimi-k2.7-code`
 - OpenClaw (coding): `z-ai/glm-5.1`
 
 ## Run it (a judge can run these from a fresh clone)

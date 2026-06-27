@@ -1,0 +1,823 @@
+[
+    {
+        "user": "U0BCGLZ0NLE",
+        "type": "message",
+        "ts": "1782543601.102089",
+        "client_msg_id": "1d64a9db-b1d2-45d4-ad60-10659027a5a9",
+        "text": "<@U0BCRBTEBGE> <@U0BEA0PMU48>",
+        "team": "T0BDD27KAL8",
+        "user_team": "T0BDD27KAL8",
+        "source_team": "T0BDD27KAL8",
+        "user_profile": {
+            "avatar_hash": "efe54afc5f04",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2026-06-23\/11426792321474_efe54afc5f0446f0b94b_72.jpg",
+            "first_name": "Chaman",
+            "real_name": "Chaman kumar",
+            "display_name": "",
+            "team": "T0BDD27KAL8",
+            "name": "prince844121",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        },
+        "thread_ts": "1782543601.102089",
+        "reply_count": 2,
+        "reply_users_count": 1,
+        "latest_reply": "1782543693.295729",
+        "reply_users": [
+            "U0BCRBTEBGE"
+        ],
+        "replies": [
+            {
+                "user": "U0BCRBTEBGE",
+                "ts": "1782543614.994339"
+            },
+            {
+                "user": "U0BCRBTEBGE",
+                "ts": "1782543693.295729"
+            }
+        ],
+        "is_locked": false,
+        "subscribed": true,
+        "last_read": "1782543693.295729",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "dccqH",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "user",
+                                "user_id": "U0BCRBTEBGE"
+                            },
+                            {
+                                "type": "text",
+                                "text": " "
+                            },
+                            {
+                                "type": "user",
+                                "user_id": "U0BEA0PMU48"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0BCRBTEBGE",
+        "type": "message",
+        "ts": "1782543614.994339",
+        "bot_id": "B0BCQ2JANJZ",
+        "app_id": "A0BDMM69Q72",
+        "text": "Hi Chaman — I’m here. What would you like me to help you with today?",
+        "team": "T0BDD27KAL8",
+        "bot_profile": {
+            "id": "B0BCQ2JANJZ",
+            "deleted": false,
+            "name": "Hermes Brain",
+            "updated": 1782292404,
+            "app_id": "A0BDMM69Q72",
+            "user_id": "U0BCRBTEBGE",
+            "icons": {
+                "image_36": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png",
+                "image_48": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"
+            },
+            "team_id": "T0BDD27KAL8"
+        },
+        "thread_ts": "1782543601.102089",
+        "parent_user_id": "U0BCGLZ0NLE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Q6l",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Chaman — I’m here. What would you like me to help you with today?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user": "U0BCRBTEBGE",
+        "type": "message",
+        "ts": "1782543693.295729",
+        "bot_id": "B0BCQ2JANJZ",
+        "app_id": "A0BDMM69Q72",
+        "text": "Hi Chaman — what can I help you with?",
+        "team": "T0BDD27KAL8",
+        "bot_profile": {
+            "id": "B0BCQ2JANJZ",
+            "app_id": "A0BDMM69Q72",
+            "user_id": "U0BCRBTEBGE",
+            "name": "Hermes Brain",
+            "icons": {
+                "image_36": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png",
+                "image_48": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png",
+                "image_72": "https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"
+            },
+            "deleted": false,
+            "updated": 1782292404,
+            "team_id": "T0BDD27KAL8"
+        },
+        "thread_ts": "1782543601.102089",
+        "parent_user_id": "U0BCGLZ0NLE",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Gz8u",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hi Chaman — what can I help you with?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "channel_join",
+        "user": "U0BDL9ZEGJE",
+        "text": "<@U0BDL9ZEGJE> has joined the channel",
+        "inviter": "U0BCGLZ0NLE",
+        "type": "message",
+        "ts": "1782552544.246789"
+    },
+    {
+        "subtype": "bot_add",
+        "text": "added an integration to this channel: <https:\/\/forge2-qualifierco.slack.com\/services\/B0BDQ5FR8UC|OpenClaw>",
+        "user": "U0BCGLZ0NLE",
+        "bot_link": "<https:\/\/forge2-qualifierco.slack.com\/services\/B0BDQ5FR8UC|OpenClaw>",
+        "bot_id": "B0BDQ5FR8UC",
+        "type": "message",
+        "ts": "1782557730.411609"
+    },
+    {
+        "subtype": "bot_add",
+        "text": "added an integration to this channel: <https:\/\/forge2-qualifierco.slack.com\/services\/B0BDNBNRZDX|OpenClaw>",
+        "user": "U0BCGLZ0NLE",
+        "bot_link": "<https:\/\/forge2-qualifierco.slack.com\/services\/B0BDNBNRZDX|OpenClaw>",
+        "bot_id": "B0BDNBNRZDX",
+        "type": "message",
+        "ts": "1782557824.259079"
+    },
+    {
+        "subtype": "bot_message",
+        "text": ":white_check_mark: CI webhook test from setup - #ci-cd is wired up.",
+        "type": "message",
+        "ts": "1782557865.286029",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "unJwG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "emoji",
+                                "name": "white_check_mark",
+                                "unicode": "2705"
+                            },
+                            {
+                                "type": "text",
+                                "text": " CI webhook test from setup - #ci-cd is wired up."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 2\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287279493>",
+        "type": "message",
+        "ts": "1782558169.745009",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "JOSg",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 2\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287279493"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 2\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287279493>",
+        "type": "message",
+        "ts": "1782558203.874209",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Bf2+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 2\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287279493"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287303134>",
+        "type": "message",
+        "ts": "1782558233.149789",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "evL08",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287303134"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287303134>",
+        "type": "message",
+        "ts": "1782558263.397369",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "6BcW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287303134"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 3\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287440173>",
+        "type": "message",
+        "ts": "1782558607.896429",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "1vZ+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 3\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287440173"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 3\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287440173>",
+        "type": "message",
+        "ts": "1782558639.623289",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "9nP",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 3\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287440173"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 4\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287455629>",
+        "type": "message",
+        "ts": "1782558648.680249",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "7W4z",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 4\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287455629"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287466037>",
+        "type": "message",
+        "ts": "1782558674.573979",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ot9RJ",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287466037"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 4\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287455629>",
+        "type": "message",
+        "ts": "1782558681.475609",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "L5R",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 4\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287455629"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 5\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287469154>",
+        "type": "message",
+        "ts": "1782558684.173899",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "u5+M",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 5\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287469154"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287476158>",
+        "type": "message",
+        "ts": "1782558707.724649",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "GVhX+",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287476158"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287466037>",
+        "type": "message",
+        "ts": "1782558711.881329",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "sjzVl",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287466037"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 5\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287469154>",
+        "type": "message",
+        "ts": "1782558712.244459",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "XGnA",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 5\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287469154"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 6\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287485582>",
+        "type": "message",
+        "ts": "1782558730.445289",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "HPM",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 6\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287485582"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287489493>",
+        "type": "message",
+        "ts": "1782558739.545269",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "3RlR",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287489493"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287476158>",
+        "type": "message",
+        "ts": "1782558739.946169",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "\/YfG6",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287476158"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 6\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287485582>",
+        "type": "message",
+        "ts": "1782558763.109069",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "A6x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 6\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287485582"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287489493>",
+        "type": "message",
+        "ts": "1782558769.180819",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "QLZh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287489493"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287520734>",
+        "type": "message",
+        "ts": "1782558829.040949",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "R4x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287520734"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI failure · CI · 7\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287522511>",
+        "type": "message",
+        "ts": "1782558833.058929",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "q+c",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI failure · CI · 7\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287522511"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · main · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287520734>",
+        "type": "message",
+        "ts": "1782558860.438399",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "h=+H",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · main · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287520734"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "subtype": "bot_message",
+        "text": "CI success · CI · 7\/merge · <https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287522511>",
+        "type": "message",
+        "ts": "1782558875.115019",
+        "bot_id": "B0BDQ5FR8UC",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "X68Qo",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "CI success · CI · 7\/merge · "
+                            },
+                            {
+                                "type": "link",
+                                "url": "https:\/\/github.com\/DevCadbury\/forge2-chaman_kumar\/actions\/runs\/28287522511"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
