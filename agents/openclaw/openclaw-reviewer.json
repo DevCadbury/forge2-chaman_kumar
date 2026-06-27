@@ -1,0 +1,23 @@
+{
+  "_comment": "OpenClaw #2 -- reviewer / QA (bonus agent). Reviews PRs before the human merges.",
+  "model": {
+    "base_url": "https://api.eastrouter.com/api/anthropic",
+    "api_key": "${EASTROUTER_API_KEY}",
+    "model": "z-ai/glm-5.1"
+  },
+  "workspace": {
+    "working_dir": "./",
+    "command_execution": true,
+    "git": true
+  },
+  "skills": ["git", "shell", "laravel-tests", "code-review"],
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "appToken": { "source": "env", "id": "OPENCLAW_SLACK_APP_TOKEN" },
+      "botToken": { "source": "env", "id": "OPENCLAW_SLACK_BOT_TOKEN" },
+      "channels": ["#agent-conv", "#ci-cd", "#human-review"]
+    }
+  },
+  "role": "Review OpenClaw's PRs: pull the branch, run php artisan test, check tenant scoping and policy coverage, and post findings to #ci-cd before the human approves in #human-review."
+}

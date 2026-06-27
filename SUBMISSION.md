@@ -1,18 +1,27 @@
-# Submission checklist -- Forge 2 / Edition 1 (PulseDesk)
+# Submission checklist — Forge 2 · Edition 1 (PulseDesk)
 
-Tick each and point to the in-repo path. Everything must be committed in THIS repo.
+- [x] Repo is public, named `forge2-chaman_kumar`
+- [x] README has exact run steps; `php artisan migrate --seed` works from a fresh clone
+- [x] Backend = Laravel 11 + MySQL ; Frontend = React 19 + Vite + Tailwind
+- [x] Multi-tenancy: Org A cannot see Org B data (tenant derived from auth session) — `app/Models/Scopes/OrganizationScope.php`, proven by `backend/tests/Feature/TenantIsolationTest.php`
+- [x] Hermes config committed → `agents/hermes/hermes-config.yaml` (secrets redacted)
+- [x] OpenClaw config committed → `agents/openclaw/openclaw.json` (secrets redacted)
+- [ ] `agent-log.md` shows the real human → Hermes → OpenClaw loop  *(fill from your Slack run)*
+- [x] `sprints/` has ≥ 2 sprint docs
+- [ ] Slack proof in `slack-export/` (export) or `slack-export/screenshots/` (per channel)  *(add after the run)*
+- [ ] App / agents-running / CI screenshots in `evidence/screenshots/`  *(add after the run)*
+- [x] `.github/workflows/ci.yml` present — install → migrate → test (backend) + build (frontend)
+- [ ] CI green run on the Actions tab  *(appears after first push/PR)*
+- [ ] PRs merged by me (human)  *(do this via the agent loop)*
+- [x] All model calls go through EastRouter (see agent configs)
 
-- [ ] Repo is public, named forge2-<myname>
-- [ ] README has exact run steps; `php artisan migrate --seed` works from a fresh clone
-- [ ] Backend = Laravel 11 + MySQL ; Frontend = React 19 + Vite + Tailwind
-- [ ] Multi-tenancy: Org A cannot see Org B data (tenant derived from auth session)
-- [ ] Hermes config committed -> agents/hermes/hermes-config.yaml (secrets redacted)
-- [ ] OpenClaw config committed -> agents/openclaw/openclaw.json (secrets redacted)
-- [ ] agent-log.md shows the real human->Hermes->OpenClaw loop
-- [ ] sprints/ has >= 2 sprint docs
-- [ ] Slack proof in slack-export/ (export) or slack-export/screenshots/ (per channel)
-- [ ] App / agents-running / CI screenshots in evidence/screenshots/
-- [ ] .github/workflows/ci.yml present + a green run on the Actions tab
-- [ ] PRs merged by ME (human); commit authors are the agents
-- [ ] All model calls went through EastRouter
-- [ ] Models used: <list>     Sprints run: <n>
+## Summary
+- **Models used:** Hermes `deepseek/deepseek-v4-pro`, OpenClaw `z-ai/glm-5.1` (EastRouter)
+- **Sprints run:** 2 (see `sprints/`)
+- **Bonus agents:** OpenClaw reviewer/QA — `agents/openclaw/openclaw-reviewer.json`
+
+## Feature coverage
+- **Must:** multi-tenancy, auth + roles, ticket CRUD, threaded conversation (public + internal),
+  list/filter/search, REST API + React UI, seeded demo data. ✔
+- **Should:** SLA policies + timers, queues & assignment, activity audit trail, dashboard metrics,
+  in-app notifications. ✔

@@ -1,27 +1,41 @@
 name: CI
+
 on:
   pull_request:
   push:
     branches: [ main ]
+
 jobs:
   backend:
+    name: Backend (Laravel + MySQL)
     runs-on: ubuntu-latest
     services:
       mysql:
         image: mysql:8
-        env: { MYSQL_DATABASE: pulsedesk_test, MYSQL_ROOT_PASSWORD: root }
-        ports: [ "3306:3306" ]
+        env:
+          MYSQL_DATABASE: pulsedesk_test
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
         options: >-
-          --health-cmd="mysqladmin ping -proot" --health-interval=10s
-          --health-timeout=5s --health-retries=5
+          --health-cmd="mysqladmin ping -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
     steps:
       - uses: actions/checkout@v4
+
       - uses: shivammathur/setup-php@v2
-        with: { php-version: '8.2' }
-      - name: Install
+        with:
+          php-version: '8.2'
+          extensions: pdo_mysql, mbstring, bcmath
+          coverage: none
+
+      - name: Install dependencies
         working-directory: backend
-        run: composer install --no-interaction --prefer-dist
-      - name: Configure
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Configure environment
         working-directory: backend
         run: |
           cp .env.example .env
@@ -30,8 +44,27 @@ jobs:
           sed -i 's/^DB_DATABASE=.*/DB_DATABASE=pulsedesk_test/' .env
           sed -i 's/^DB_USERNAME=.*/DB_USERNAME=root/' .env
           sed -i 's/^DB_PASSWORD=.*/DB_PASSWORD=root/' .env
-      - name: Migrate & test
+
+      - name: Migrate database
         working-directory: backend
+        run: php artisan migrate --force
+
+      - name: Run tests
+        working-directory: backend
+        run: php artisan test
+
+  frontend:
+    name: Frontend (React + Vite)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install and build
+        working-directory: frontend
         run: |
-          php artisan migrate --force
-          php artisan test
+          npm install
+          npm run build

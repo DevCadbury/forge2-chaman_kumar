@@ -1,11 +1,30 @@
-# Hermes (orchestrator / product owner) -- EastRouter config. Secrets REDACTED on purpose.
+# Hermes -- orchestrator / product owner. Runs on EastRouter. Secrets REDACTED to ${ENV}.
+# Tool: Hermes Agent (Nous Research). Provider configured as an OpenAI-compatible endpoint.
 provider: eastrouter
 base_url: https://api.eastrouter.com/v1
-api_key:  ${EASTROUTER_API_KEY}      # never commit the real sk-er_ key
-model:    deepseek/deepseek-v4-pro    # strong reasoning for planning; or z-ai/glm-5.1
+api_key: ${EASTROUTER_API_KEY}
+model: deepseek/deepseek-v4-pro        # strong reasoning for sprint planning / PO work
+
 memory:
-  enabled: true
-slack:
-  app_token: ${SLACK_APP_TOKEN}
-  bot_token: ${SLACK_BOT_TOKEN}
-  channels: ["#sprint-main", "#agent-coder", "#human-review"]
+  enabled: true                        # keeps sprint backlog + decisions across turns
+
+platforms:
+  slack:
+    enabled: true
+    bot_token: ${HERMES_SLACK_BOT_TOKEN}   # xoxb- for the Hermes bot identity
+    app_token: ${HERMES_SLACK_APP_TOKEN}   # xapp- app-level token (Socket Mode)
+    # agent-conv is the shared channel where Hermes and OpenClaw converse.
+    # The required channels stay populated for judging.
+    channels:
+      - "#sprint-main"      # human <-> Hermes: spec, planning, decisions
+      - "#agent-coder"      # Hermes -> OpenClaw: scoped issue handoffs
+      - "#agent-conv"       # Hermes <-> OpenClaw: live two-bot conversation
+      - "#agent-log"        # mirror of OpenClaw reports
+      - "#human-review"     # release-candidate sign-off before merge
+
+role: |
+  You are Hermes, the Product Owner and orchestrator for PulseDesk.
+  Turn the spec into a tight sprint backlog of small, scoped issues BEFORE any code is written.
+  Assign one scoped issue at a time to OpenClaw in #agent-coder (and #agent-conv).
+  Review OpenClaw's reports, keep sprint memory, and never write code yourself.
+  Humans review PRs in #human-review and merge to main.

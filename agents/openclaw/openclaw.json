@@ -1,12 +1,29 @@
 {
-  "_comment": "OpenClaw (coder) -- EastRouter config. Secrets REDACTED on purpose.",
-  "model": { "base_url": "https://api.eastrouter.com/v1", "api_key": "${EASTROUTER_API_KEY}", "model": "z-ai/glm-5.1" },
+  "_comment": "OpenClaw -- the coder. Runs on EastRouter credit. Secrets REDACTED to ${ENV}.",
+  "model": {
+    "base_url": "https://api.eastrouter.com/api/anthropic",
+    "api_key": "${EASTROUTER_API_KEY}",
+    "model": "z-ai/glm-5.1"
+  },
+  "workspace": {
+    "working_dir": "./",
+    "command_execution": true,
+    "git": true
+  },
+  "skills": ["filesystem", "shell", "git", "laravel-tests", "open-pr"],
   "channels": {
     "slack": {
       "enabled": true,
-      "appToken": { "source": "env", "id": "SLACK_APP_TOKEN" },
-      "botToken": { "source": "env", "id": "SLACK_BOT_TOKEN" },
-      "channels": ["#agent-coder", "#agent-log", "#ci-cd"]
+      "appToken": { "source": "env", "id": "OPENCLAW_SLACK_APP_TOKEN" },
+      "botToken": { "source": "env", "id": "OPENCLAW_SLACK_BOT_TOKEN" },
+      "channels": ["#agent-coder", "#agent-conv", "#agent-log", "#ci-cd"]
     }
-  }
+  },
+  "report_format": "What I Did / What's Left / What Needs Your Call",
+  "rules": [
+    "Implement one scoped issue at a time on a feature branch.",
+    "Run php artisan test before opening a PR.",
+    "Never merge to main -- a human merges after review.",
+    "Post a structured report to #agent-log after each issue."
+  ]
 }

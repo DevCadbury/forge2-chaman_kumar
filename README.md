@@ -1,40 +1,65 @@
-# PulseDesk -- Forge 2 / Edition 1  (rename this repo: forge2-<yourname>)
+# PulseDesk — Forge 2 · Edition 1
 
-A multi-tenant support-desk SaaS, BUILT BY ORCHESTRATING Hermes + OpenClaw over Slack.
-This is a STARTER SKELETON -- structure only, zero features. Build the features with your agents.
+A multi-tenant support-desk SaaS, built by orchestrating **Hermes** (product owner) and
+**OpenClaw** (coder) over Slack. Organizations, roles, tickets with threaded conversations,
+SLA timers, queues, audit trails, dashboard metrics, and in-app notifications.
 
-## Stack (required)
-Laravel 11 . PHP 8.2 . MySQL 8 . Laravel Sanctum . React 19 . Vite . Tailwind
+## Stack
+Laravel 11 · PHP 8.2+ · MySQL 8 · Laravel Sanctum · React 19 · Vite · Tailwind CSS
 
-## EastRouter models I used
-- Hermes (planning / product owner): <e.g. deepseek/deepseek-v4-pro>
-- OpenClaw (coding): <e.g. z-ai/glm-5.1>
+## EastRouter models used
+- Hermes (planning / product owner): `deepseek/deepseek-v4-pro`
+- OpenClaw (coding): `z-ai/glm-5.1`
 
-## How to run  (EXACT -- a judge will run these from a fresh clone)
-### Backend (Laravel + MySQL)
-    cd backend
-    cp .env.example .env          # set DB_* for your MySQL
-    composer install
-    php artisan key:generate
-    php artisan migrate --seed
-    php artisan serve             # http://127.0.0.1:8000
-### Frontend (React + Vite)
-    cd frontend
-    cp .env.example .env          # set VITE_API_URL=http://127.0.0.1:8000
-    npm install
-    npm run dev                   # http://127.0.0.1:5173
+## Run it (a judge can run these from a fresh clone)
 
-## Demo logins (from the seeder)  -- fill in after you build the seeder
-- admin@acme.test / password
-- agent@acme.test / password
-- customer@acme.test / password
+### Backend — Laravel + MySQL
+```bash
+cd backend
+cp .env.example .env            # set DB_* for your MySQL 8 instance
+composer install
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve               # http://127.0.0.1:8000
+```
+
+### Frontend — React + Vite
+```bash
+cd frontend
+cp .env.example .env            # VITE_API_URL=http://127.0.0.1:8000
+npm install
+npm run dev                     # http://127.0.0.1:5173
+```
+
+## Demo logins (from the seeder)
+Organization **Acme Inc** (12 tickets):
+- `admin@acme.test` / `password` — admin
+- `agent1@acme.test` / `password` — agent
+- `customer1@acme.test` / `password` — customer
+
+A second org **Globex Corp** (`admin@globex.test` / `password`, 6 tickets) exists to demonstrate
+tenant isolation — sign in as each and confirm neither sees the other's data.
+
+## Multi-tenancy in one line
+Every tenant-owned row carries an `organization_id`. A global Eloquent scope
+(`App\Models\Scopes\OrganizationScope`) derives the tenant from the **authenticated user**
+(never from client input) and filters every query. Cross-org access returns `404`.
+
+## Tests
+```bash
+cd backend
+php artisan test
+```
+Covers auth, ticket CRUD + filters, comment visibility (internal notes hidden from customers),
+and tenant isolation. CI runs the same suite against MySQL 8 on every PR.
 
 ## Live URL
-<paste if deployed, else: "runs locally per the steps above">
+Runs locally per the steps above.
 
-## Where my evidence lives (everything is in THIS repo -- no Drive, no video)
-- agents/        -- real Hermes + OpenClaw configs (secrets redacted)
-- agent-log.md   -- the human->Hermes->OpenClaw loop
-- sprints/       -- one doc per sprint
-- slack-export/  -- Slack export, or per-channel screenshots
-- evidence/screenshots/ -- app, agents-running, CI screenshots
+## Where the evidence lives (everything in this repo)
+- `agents/` — real Hermes + OpenClaw configs (secrets redacted to `${ENV}`)
+- `agent-log.md` — the human → Hermes → OpenClaw loop
+- `sprints/` — one doc per sprint
+- `slack-export/` — Slack export or per-channel screenshots
+- `evidence/screenshots/` — app, agents-running, and CI screenshots
+- `.github/workflows/ci.yml` — CI: install → migrate → test (backend) + build (frontend)
