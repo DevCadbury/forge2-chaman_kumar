@@ -15,6 +15,7 @@ class NotificationController extends Controller
     {
         $notifications = Notification::query()
             ->where('user_id', $request->user()->id)
+            ->where('organization_id', $request->user()->organization_id)
             ->latest()
             ->limit(50)
             ->get();
@@ -35,6 +36,7 @@ class NotificationController extends Controller
     {
         Notification::query()
             ->where('user_id', $request->user()->id)
+            ->where('organization_id', $request->user()->organization_id)
             ->whereNull('read_at')
             ->update(['read_at' => now()]);
 
