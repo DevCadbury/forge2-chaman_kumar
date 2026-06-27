@@ -138,12 +138,11 @@ CI success - CI - 6/merge - .../actions/runs/28287485582
 CI success - CI - main    - .../actions/runs/28287489493
 ```
 
-(One transient failure on `7/merge` `.../runs/28287522511` is being resolved before merge.)
+(`7/merge` first hit a transient Docker Hub `mysql:8` pull timeout; the job was re-run and went green.)
 
-**Review & merge -- `#human-review` (human):** PRs #3-#6 were each reviewed and **merged by the
-human** on GitHub after their CI runs went green (merge times 2026-06-27 11:10-11:13 UTC), plus
-housekeeping PR #2 (11:03 UTC). **PR #7 (PD-29) remains open** -- its first CI run failed and is
-being resolved before merge.
+**Review & merge -- `#human-review` (human):** PRs #3-#7 were each reviewed and **merged by the
+human** on GitHub after their CI runs went green (plus housekeeping PR #2). PR #7's first run hit
+a transient Docker-pull timeout; it was re-run green and then human-merged (2026-06-27 12:21 UTC).
 
 ---
 
@@ -164,7 +163,6 @@ graded sprint loop above.
   review + merge (`#human-review`), repeated across Sprints 3 and 4 (and foundation Sprints 1-2).
 - **Distinct bots:** `@hermes_brain` and `@openclaw_worker` are separate Slack apps/users
   (different user IDs above).
-- **Human is the merge actor:** PRs #1-#6 merged by the human (#7 still open); no bot touches
-  `main`.
+- **Human is the merge actor:** all PRs #1-#7 merged by the human; no bot ever touches `main`.
 - **Evidence cross-checks:** the PR numbers, commit hashes, test counts, and CI run IDs above
   match the GitHub repo, the Actions tab, and the committed `slack-export/`.
