@@ -1,8 +1,13 @@
 # PulseDesk — Forge 2 · Edition 1
 
+![CI](https://github.com/forge2-qualifier-chaman/pulsedesk/workflows/CI/badge.svg)
+
 A multi-tenant support-desk SaaS, built by orchestrating **Hermes** (product owner) and
 **OpenClaw** (coder) over Slack. Organizations, roles, tickets with threaded conversations,
 SLA timers, queues, audit trails, dashboard metrics, and in-app notifications.
+
+## CI/CD
+Every push and PR triggers the CI pipeline (`.github/workflows/ci.yml`). Backend tests run against MySQL 8 on PHP 8.2; frontend builds via Node 20. Results post to Slack `#ci-cd`.
 
 ## Stack
 Laravel 11 · PHP 8.2+ · MySQL 8 · Laravel Sanctum · React 19 · Vite · Tailwind CSS
