@@ -9,7 +9,7 @@
 - [x] `agent-log.md` shows the real human → Hermes → OpenClaw loop
 - [x] `sprints/` has ≥ 2 sprint docs
 - [x] Slack proof in `slack-export/` (export) or `slack-export/screenshots/` (per channel)
-- [ ] App / agents-running / CI screenshots in `evidence/screenshots/`  *(add after the run)*
+- [x] Evidence committed in `evidence/screenshots/`: EastRouter model-usage (API hits + credit), both agents running, multi-tenancy (Org A vs B), green CI, and Slack channels; plus full `slack-export/` and a live deployment (Vercel + Render).
 - [x] `.github/workflows/ci.yml` present — install → migrate → test (backend) + build (frontend)
 - [x] CI green run on the Actions tab
 - [x] PRs merged by me (human)
