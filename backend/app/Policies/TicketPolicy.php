@@ -45,4 +45,9 @@ class TicketPolicy
     {
         return $user->isStaff();
     }
+
+    public function reopen(User $user, Ticket $ticket): bool
+    {
+        return $user->isStaff();
+    }
 }
