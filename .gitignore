@@ -9,3 +9,12 @@
 .DS_Store
 composer.phar
 # never commit real secrets / keys
+
+# OpenClaw agent workspace scratch files (auto-created in the workspace root)
+SOUL.md
+IDENTITY.md
+AGENTS.md
+TOOLS.md
+USER.md
+HEARTBEAT.md
+openclaw-workspace-state.json
