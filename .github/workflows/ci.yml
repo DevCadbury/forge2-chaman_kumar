@@ -76,6 +76,10 @@ jobs:
           npm install
           npm run build
 
+      - name: Smoke test
+        working-directory: frontend
+        run: node scripts/smoke-test.js
+
       - name: Notify Slack
         if: always()
         run: |
