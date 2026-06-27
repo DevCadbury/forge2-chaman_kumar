@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Enums\TicketPriority;
 use App\Models\Organization;
 use App\Models\Ticket;
 use App\Models\User;
@@ -117,5 +118,68 @@ class TicketTest extends TestCase
             ->assertJsonPath('data.status', 'resolved');
 
         $this->assertNotNull($ticket->fresh()->resolved_at);
+    }
+
+    public function test_filter_by_priority(): void
+    {
+        Ticket::factory()->create([
+            'organization_id' => $this->org->id,
+            'requester_id' => $this->customer->id,
+            'subject' => 'High priority issue',
+            'priority' => TicketPriority::High,
+        ]);
+        Ticket::factory()->create([
+            'organization_id' => $this->org->id,
+            'requester_id' => $this->customer->id,
+            'subject' => 'Low priority issue',
+            'priority' => TicketPriority::Low,
+        ]);
+
+        $this->actingAs($this->agent, 'sanctum')
+            ->getJson('/api/tickets?priority=high')
+            ->assertOk()
+            ->assertJsonCount(1, 'data')
+            ->assertJsonPath('data.0.priority', 'high');
+    }
+
+    public function test_filter_by_assignee(): void
+    {
+        $otherAgent = User::factory()->agent()->create(['organization_id' => $this->org->id]);
+
+        Ticket::factory()->create([
+            'organization_id' => $this->org->id,
+            'requester_id' => $this->customer->id,
+            'assignee_id' => $this->agent->id,
+        ]);
+        Ticket::factory()->create([
+            'organization_id' => $this->org->id,
+            'requester_id' => $this->customer->id,
+            'assignee_id' => $otherAgent->id,
+        ]);
+
+        $this->actingAs($this->agent, 'sanctum')
+            ->getJson("/api/tickets?assignee={$this->agent->id}")
+            ->assertOk()
+            ->assertJsonCount(1, 'data')
+            ->assertJsonPath('data.0.assignee_id', $this->agent->id);
+    }
+
+    public function test_customer_can_only_see_own_tickets(): void
+    {
+        $otherCustomer = User::factory()->create(['organization_id' => $this->org->id]);
+
+        Ticket::factory()->count(2)->create([
+            'organization_id' => $this->org->id,
+            'requester_id' => $this->customer->id,
+        ]);
+        Ticket::factory()->count(3)->create([
+            'organization_id' => $this->org->id,
+            'requester_id' => $otherCustomer->id,
+        ]);
+
+        $this->actingAs($this->customer, 'sanctum')
+            ->getJson('/api/tickets')
+            ->assertOk()
+            ->assertJsonCount(2, 'data');
     }
 }
