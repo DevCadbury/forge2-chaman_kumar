@@ -1,6 +1,6 @@
 # PulseDesk — Forge 2 · Edition 1
 
-![CI](https://github.com/forge2-qualifier-chaman/pulsedesk/workflows/CI/badge.svg)
+![CI](https://github.com/DevCadbury/forge2-chaman_kumar/actions/workflows/ci.yml/badge.svg)
 
 A multi-tenant support-desk SaaS, built by orchestrating **Hermes** (product owner) and
 **OpenClaw** (coder) over Slack. Organizations, roles, tickets with threaded conversations,
@@ -58,8 +58,11 @@ php artisan test
 Covers auth, ticket CRUD + filters, comment visibility (internal notes hidden from customers),
 and tenant isolation. CI runs the same suite against MySQL 8 on every PR.
 
-## Live URL
-Runs locally per the steps above.
+## Live deployment
+- Frontend (React, Vercel): https://forge2-chaman-kumar.vercel.app/
+- Backend API (Laravel, Render): https://pulsedesk-api-wvmi.onrender.com
+
+A judge can use the live URLs above, or run locally from a fresh clone with the steps in this README.
 
 ## Where the evidence lives (everything in this repo)
 - `agents/` — real Hermes + OpenClaw configs (secrets redacted to `${ENV}`)

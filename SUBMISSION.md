@@ -15,6 +15,10 @@
 - [x] PRs merged by me (human)
 - [x] All model calls go through EastRouter (see agent configs)
 
+## Live deployment
+- Frontend: https://forge2-chaman-kumar.vercel.app/
+- Backend API: https://pulsedesk-api-wvmi.onrender.com
+
 ## Summary
 - **Models used:** Hermes `moonshotai/kimi-k2.7-code`, OpenClaw `z-ai/glm-5.1` (EastRouter)
 - **Sprints run:** 2 (see `sprints/`)
