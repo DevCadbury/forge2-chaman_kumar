@@ -117,6 +117,19 @@ class TicketController extends Controller
         return new TicketResource($ticket->load(['requester', 'assignee']));
     }
 
+    public function reopen(Ticket $ticket): TicketResource
+    {
+        $this->authorize('reopen', $ticket);
+
+        $ticket->status = TicketStatus::Open;
+        $ticket->resolved_at = null;
+        $ticket->save();
+
+        $this->activity->record($ticket, 'reopened');
+
+        return new TicketResource($ticket->load(['requester', 'assignee']));
+    }
+
     public function destroy(Ticket $ticket): JsonResponse
     {
         $this->authorize('delete', $ticket);

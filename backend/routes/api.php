@@ -22,6 +22,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/tickets/{ticket}', [TicketController::class, 'update'])->name('tickets.update');
     Route::delete('/tickets/{ticket}', [TicketController::class, 'destroy'])->name('tickets.destroy');
     Route::post('/tickets/{ticket}/assign', [TicketController::class, 'assign'])->name('tickets.assign');
+    Route::patch('/tickets/{ticket}/reopen', [TicketController::class, 'reopen'])->name('tickets.reopen');
 
     Route::get('/tickets/{ticket}/comments', [CommentController::class, 'index'])->name('comments.index');
     Route::post('/tickets/{ticket}/comments', [CommentController::class, 'store'])->name('comments.store');
