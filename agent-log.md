@@ -4,6 +4,12 @@ PulseDesk was built and hardened by orchestrating two **distinct Slack bots** un
 direction, in the open across six channels. This log is the real audit trail; it lines up with
 the git history, the merged PRs, and the GitHub Actions runs posted to `#ci-cd`.
 
+> **Reading note.** The earliest messages in the Slack export are environment setup -- wiring the
+> two distinct bots, a `GET /api/health` connectivity smoke task, and aligning both agents on the
+> repo path. The graded sprint loop is documented below; the cleanest, fully-separated two-bot
+> loops are Sprints 3 onward (QA hardening, then a PR-per-issue sprint).
+
+
 ## The two agents (distinct Slack identities)
 
 | Agent | Slack bot | Role | Model (EastRouter) |
