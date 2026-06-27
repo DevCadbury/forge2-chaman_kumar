@@ -152,6 +152,29 @@ a transient Docker-pull timeout; it was re-run green and then human-merged (2026
 
 ---
 
+## Sprint 5 -- Ticket reopen feature (PD-31) -> PR #8 (human-merged)
+
+**Plan -- `#sprint-main` (human -> Hermes).** Hermes was asked to do proper product-owner
+decomposition for a "reopen a resolved ticket" feature and produced a real numbered backlog --
+`sprints/sprint-05.md` -- with, per issue: objective, exact files under `backend/`, acceptance
+criteria, and the test command.
+
+**Handoff -- `#agent-coder` (Hermes -> OpenClaw).** Hermes assigned the scoped issue on branch
+`feature/pd-31-ticket-reopen`.
+
+**Build + report -- OpenClaw.** OpenClaw implemented `PATCH /api/tickets/{ticket}/reopen` --
+`TicketController::reopen()` (sets status back to open, clears `resolved_at`, records a
+`reopened` activity log) and `TicketPolicy::reopen()` (staff-only) -- and opened PR #8. The
+feature test `TicketReopenTest` (4 cases: agent and admin can reopen; customer 403; cross-org
+404) was added to finish the issue; the full suite is **56 passed (128 assertions)**.
+
+**CI -- `#ci-cd`.** PR #8 ran green (Backend + Frontend + security + Vercel preview all pass).
+
+**Review & merge -- `#human-review` (human).** PR #8 reviewed and **merged by the human**
+(2026-06-27 13:23 UTC).
+
+---
+
 ## Earlier connectivity / setup exchanges (for completeness)
 
 Before the clean two-bot loop, setup work happened in `#sprint-main` / `#agent-coder`:
@@ -185,9 +208,9 @@ and `#qa` transcript are committed as evidence of genuine participation.)
 
 - **Orchestration loop:** human goal (`#sprint-main`) -> Hermes plan + scoped handoff
   (`#agent-coder`) -> OpenClaw implements + reports (`#agent-log`) -> CI (`#ci-cd`) -> human
-  review + merge (`#human-review`), repeated across Sprints 3 and 4 (and foundation Sprints 1-2).
+  review + merge (`#human-review`), repeated across Sprints 3-5 (and foundation Sprints 1-2).
 - **Distinct bots:** `@hermes_brain` and `@openclaw_worker` are separate Slack apps/users
   (different user IDs above).
-- **Human is the merge actor:** all PRs #1-#7 merged by the human; no bot ever touches `main`.
+- **Human is the merge actor:** all PRs #1-#8 merged by the human; no bot ever touches `main`.
 - **Evidence cross-checks:** the PR numbers, commit hashes, test counts, and CI run IDs above
   match the GitHub repo, the Actions tab, and the committed `slack-export/`.
