@@ -9,7 +9,6 @@ use App\Http\Requests\RegisterRequest;
 use App\Http\Resources\UserResource;
 use App\Models\Organization;
 use App\Models\User;
-use App\Support\TenantContext;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -22,8 +21,6 @@ class AuthController extends Controller
     {
         $user = DB::transaction(function () use ($request) {
             $organization = Organization::create(['name' => $request->organization_name]);
-
-            TenantContext::set($organization->id);
 
             return User::create([
                 'organization_id' => $organization->id,
